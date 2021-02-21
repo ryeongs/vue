@@ -10,13 +10,12 @@
                      <image001.png>
  
 - 동영상 링크 적용
-                     <image003.jpg>
- 
-1번 아이콘 (Pre-filled pen video)
-https://youtu.be/q0PvjlJDc2c
-2번 아이콘 (Pre-filled syringe video)
-https://youtu.be/0tZTqbZLHHM
- (완료)
+                     <image003.jpg> 
+ 1번 아이콘 (Pre-filled pen video)
+ https://youtu.be/q0PvjlJDc2c
+ 2번 아이콘 (Pre-filled syringe video)
+ https://youtu.be/0tZTqbZLHHM
+  (완료)
 
 Education, EducationPdf, EducationPdf3 
 this.geoLocation = "AU";
