@@ -46,10 +46,10 @@ KSUPERMIN / 1234
 o 특정 알림에 체크해도 알림이 표시되지 않음
 결재알림, 게시판 알림은 전혀 오지 않으나 업무지원요청 관련 알림은 옵니다.
 
-마이페이지 알림설정 오류 수정 
+마이페이지 알림설정 오류 파악중
 
 ### 02/22
-<<에디터 내용입력 오류사항>>
+<<에디터 내용입력 오류사항(**완료**)>>by Judy 
 지출결의서 관련 기안의 경우
 docText를 html로 변환하는데
 1. 에디터에서 첫번째 문장을 <>태그로 감싸지않고 그냥 text 처리되었을경우
@@ -76,12 +76,52 @@ Draft.vue - 989
 
 
 ### 02/23(화)
+
+<오늘의 에러>
+▶ [ERROR] 2021-02-23 13:17:43.911 [http-nio-9090-exec-5] com.kaonsoft.groupware.common.utility.LogUtility[error:130] - [com.kaonsoft.groupware.mainframe.controller.project.WorkSupportRequestManageController.getExcelList] org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'writeDateFrom' not found. Available parameters are [arg0, param1, status, param2]
+
+해결 방법 -> 
+	1. T_BZ_WORKSUPP_REQ_Mapper.xml 에 
+	<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데
+	parameterType이 BzWorkSupportSearchRequestVO" 인데 
+	IBzWorkSupportReqMapper.java 안에 
+	List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo); 부분에 
+	List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status); 로 해놓음;;
+	parameterType이 두개일 순 없다.. 
+	
+	
+	2.
+	 <if test="checked != null and checked != ''">
+                AND REQ.STATUS IN
+                <foreach collection="checked" open="(" close=")" item="checked" separator=",">
+                    #{checked}
+                </foreach>
+            </if>
+		   <!-- <choose>
+	           <when test = "checked != null and checked != ''">
+	            AND   REQ.STATUS = #{checked}
+	           </when>
+	           <otherwise>
+				AND   REQ.STATUS = '0004'
+			   </otherwise>
+		   </choose>  -->
+		
+	vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다. 
+	밑에 <choose> 주석이 전 버전 
+
 -- 엑셀 다운로드 오류 : 
 o 업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨
-업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면 합니다.  (완료)
+업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면 합니다.  (**완료**)
 TechHQ.vue
 BzWorkSupportReqMngServiceImpl.java
 T_BZ_WORKSUPP_REQ_Mapper.xml
 IBzWorkSupportReqMapper.java
 WorkSupportRequestManageController.java
 
+
+-- activeMQ 
+
+실행하는법 : 최신 버전 다운로드 후 (http://activemq.apache.org/) 
+	     압축 풀고 cmd 로 /bin 까지가서 activemq start 입력
+	     그럼 실행된다.
+activeMQ 실행 상황 보는 사이트(http://localhost:8161/admin)
