@@ -72,5 +72,16 @@ Draft.vue - 989
 결정된 사항
 - 3월 중순까지 셀트리온 관리자 등 완료
 - 2월 말까지 그룹웨어 모든 오류 사항 수정 완료
-- 현재까지 온 오류, 확인 사항 엑셀 정리 후 써스(대표님)께 제출
+- 현재까지 온 오류, 확인 사항 엑셀 정리 후 써스(대표님)께 제출(완료)
+
+
+### 02/23(화)
+-- 엑셀 다운로드 오류 : 
+o 업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨
+업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면 합니다.  (완료)
+TechHQ.vue
+BzWorkSupportReqMngServiceImpl.java
+T_BZ_WORKSUPP_REQ_Mapper.xml
+IBzWorkSupportReqMapper.java
+WorkSupportRequestManageController.java
 
