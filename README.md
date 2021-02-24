@@ -92,8 +92,8 @@ Draft.vue - 989
 	List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo); 부분에 
 	List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status); 로 해놓음;;
 	parameterType이 두개일 순 없다.. 
-	
-	
+	<pre>
+	<code>
 	 <if test="checked != null and checked != ''">
                 AND REQ.STATUS IN
                 <foreach collection="checked" open="(" close=")" item="checked" separator=",">
@@ -108,7 +108,8 @@ Draft.vue - 989
 				AND   REQ.STATUS = '0004'
 			   </otherwise>
 		   </choose>  -->
-		
+	</code>
+	</pre>
 	vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다. 
 	밑에 <choose> 주석이 전 버전 
 
