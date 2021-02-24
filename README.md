@@ -86,11 +86,11 @@ Draft.vue - 989
 - 해결 방법    
 
 T_BZ_WORKSUPP_REQ_Mapper.xml 에    
-<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데      
-parameterType이 BzWorkSupportSearchRequestVO" 인데       
+"" <select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> "" 가 있는데      
+parameterType이 BzWorkSupportSearchRequestVO 인데       
 IBzWorkSupportReqMapper.java 안에       
-List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo); 부분에       
-List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status); 로 해놓음;;      
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo) 부분에       
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status) 로 해놓음;;      
 parameterType이 두개일 순 없다..       
 	'''
 	 <if test="checked != null and checked != ''">
