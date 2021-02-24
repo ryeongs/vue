@@ -24,7 +24,7 @@ ES,  IE , GB
 각 나라 별 스크린샷 
 호주, 스페인, 아일랜드 ,영국
 (완료) 
-
+***
 
 ### 02/18 
 
@@ -35,7 +35,7 @@ ES,  IE , GB
 동일한 오류가 발생
 
 오류 수정 요청 들어옴 
-
+***
 ### 02/19
 
 테스트 아이디 
@@ -47,7 +47,7 @@ o 특정 알림에 체크해도 알림이 표시되지 않음
 결재알림, 게시판 알림은 전혀 오지 않으나 업무지원요청 관련 알림은 옵니다.
 
 마이페이지 알림설정 오류 파악중
-
+***
 ### 02/22
 - <<에디터 내용입력 오류사항(**완료**)>>by Judy 
 
@@ -75,7 +75,7 @@ Draft.vue - 989
 - 2월 말까지 그룹웨어 모든 오류 사항 수정 완료
 - 현재까지 온 오류, 확인 사항 엑셀 정리 후 써스(대표님)께 제출(완료)
 
-
+***
 ### 02/23(화)
    
 - <오늘의 에러>
@@ -92,7 +92,7 @@ IBzWorkSupportReqMapper.java 안에
 List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo); 부분에       
 List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status); 로 해놓음;;      
 parameterType이 두개일 순 없다..       
-	
+	'''
 	 <if test="checked != null and checked != ''">
                 AND REQ.STATUS IN
                 <foreach collection="checked" open="(" close=")" item="checked" separator=",">
@@ -107,7 +107,7 @@ parameterType이 두개일 순 없다..
 				AND   REQ.STATUS = '0004'
 			   </otherwise>
 		   </choose> 
-   	
+   	'''
 vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다.    
 밑에 <choose> 주석이 전 버전    
 
@@ -133,7 +133,9 @@ activeMQ 실행 상황 보는 사이트(http://localhost:8161/admin)
 id : admin / pw: admin
 
    
-
+***
 ### 02/24(수)
 
-- 알림 
+- 알림 테스트
+- https://gw.sangsanginworld.co.kr/#/login 상상인 사이트    
+id : KSUPERMIN /pw : k@0ns0ftssi20200921!@
