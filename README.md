@@ -130,8 +130,7 @@ WorkSupportRequestManageController.java
 	     압축 풀고 cmd 로 /bin 까지가서 activemq start 입력   
 	     그럼 실행된다.   
 activeMQ 실행 상황 보는 사이트(http://localhost:8161/admin)    
-id : admin / pw: admin
-
+id : admin / pw: admin 
    
 ***
 ### 02/24(수)
