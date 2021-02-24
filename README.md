@@ -85,13 +85,13 @@ Draft.vue - 989
    
 - 해결 방법    
 
-	T_BZ_WORKSUPP_REQ_Mapper.xml 에    
-	<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데   
-	parameterType이 BzWorkSupportSearchRequestVO" 인데    
-	IBzWorkSupportReqMapper.java 안에    
-	List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo); 부분에    
-	List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status); 로 해놓음;;   
-	parameterType이 두개일 순 없다..    
+T_BZ_WORKSUPP_REQ_Mapper.xml 에    
+<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데   
+parameterType이 BzWorkSupportSearchRequestVO" 인데    
+IBzWorkSupportReqMapper.java 안에    
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo); 부분에    
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status); 로 해놓음;;   
+parameterType이 두개일 순 없다..    
 	<pre>   
 	<code>
 	 <if test="checked != null and checked != ''">
@@ -110,8 +110,8 @@ Draft.vue - 989
 		   </choose>  -->
 	</code>
 	</pre>
-	vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다.    
-	밑에 <choose> 주석이 전 버전    
+vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다.    
+밑에 <choose> 주석이 전 버전    
 
 
 - **엑셀 다운로드 오류** :    
