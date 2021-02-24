@@ -85,7 +85,7 @@ Draft.vue - 989
 
 - 해결 방법 
 
-	1. T_BZ_WORKSUPP_REQ_Mapper.xml 에 
+	T_BZ_WORKSUPP_REQ_Mapper.xml 에 
 	<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데
 	parameterType이 BzWorkSupportSearchRequestVO" 인데 
 	IBzWorkSupportReqMapper.java 안에 
@@ -94,7 +94,6 @@ Draft.vue - 989
 	parameterType이 두개일 순 없다.. 
 	
 	
-	2.
 	 <if test="checked != null and checked != ''">
                 AND REQ.STATUS IN
                 <foreach collection="checked" open="(" close=")" item="checked" separator=",">
