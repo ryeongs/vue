@@ -100,14 +100,14 @@ parameterType이 두개일 순 없다..
                     #{checked}
                 </foreach>
             </if>
-		   <!-- <choose>
+		    <choose>
 	           <when test = "checked != null and checked != ''">
 	            AND   REQ.STATUS = #{checked}
 	           </when>
 	           <otherwise>
 				AND   REQ.STATUS = '0004'
 			   </otherwise>
-		   </choose>  -->
+		   </choose> 
 	</code>
 	</pre>
 vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다.    
@@ -115,7 +115,7 @@ vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한�
 
 
 - **엑셀 다운로드 오류** :    
-o 업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨   
+	o 업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨   
 업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면 합니다.  (**완료**)
 
 TechHQ.vue   
