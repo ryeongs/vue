@@ -78,10 +78,12 @@ Draft.vue - 989
 ### 02/23(화)
 
 - <오늘의 에러>
- ▶ [ERROR] 2021-02-23 13:17:43.911 [http-nio-9090-exec-5] com.kaonsoft.groupware.common.utility.LogUtility[error:130] - [com.kaonsoft.groupware.mainframe.controller.project.WorkSupportRequestManageController.getExcelList] org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'writeDateFrom' not found. Available parameters are [arg0, param1, status, param2]
+
+[ERROR] 2021-02-23 13:17:43.911 [http-nio-9090-exec-5] com.kaonsoft.groupware.common.utility.LogUtility[error:130] - [com.kaonsoft.groupware.mainframe.controller.project.WorkSupportRequestManageController.getExcelList] org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'writeDateFrom' not found. Available parameters are [arg0, param1, status, param2]
 
 
 - 해결 방법 -> 
+
 	1. T_BZ_WORKSUPP_REQ_Mapper.xml 에 
 	<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데
 	parameterType이 BzWorkSupportSearchRequestVO" 인데 
@@ -133,4 +135,4 @@ id : admin / pw: admin
 
 ### 02/24(수)
 
-알림 
+- 알림 
