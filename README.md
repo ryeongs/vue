@@ -77,11 +77,11 @@ Draft.vue - 989
 
 ### 02/23(화)
 
-<오늘의 에러>
-▶ [ERROR] 2021-02-23 13:17:43.911 [http-nio-9090-exec-5] com.kaonsoft.groupware.common.utility.LogUtility[error:130] - [com.kaonsoft.groupware.mainframe.controller.project.WorkSupportRequestManageController.getExcelList] org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'writeDateFrom' not found. Available parameters are [arg0, param1, status, param2]
+- <오늘의 에러>
+ ▶ [ERROR] 2021-02-23 13:17:43.911 [http-nio-9090-exec-5] com.kaonsoft.groupware.common.utility.LogUtility[error:130] - [com.kaonsoft.groupware.mainframe.controller.project.WorkSupportRequestManageController.getExcelList] org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.binding.BindingException: Parameter 'writeDateFrom' not found. Available parameters are [arg0, param1, status, param2]
 
 
-해결 방법 -> 
+- 해결 방법 -> 
 	1. T_BZ_WORKSUPP_REQ_Mapper.xml 에 
 	<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데
 	parameterType이 BzWorkSupportSearchRequestVO" 인데 
@@ -111,7 +111,7 @@ Draft.vue - 989
 	밑에 <choose> 주석이 전 버전 
 
 
- **엑셀 다운로드 오류** : 
+- **엑셀 다운로드 오류** : 
 o 업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨
 업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면 합니다.  (**완료**)
 TechHQ.vue
@@ -122,7 +122,7 @@ WorkSupportRequestManageController.java
 
 
 
- **activeMQ** 
+ - **activeMQ** 
 
 실행하는법 : 최신 버전 다운로드 후 (http://activemq.apache.org/) 
 	     압축 풀고 cmd 로 /bin 까지가서 activemq start 입력
