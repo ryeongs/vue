@@ -48,39 +48,40 @@
 
 ## 현재 상황   
 < 자원요청 > - 알림 o   
-< 일정관리(업무요청) >- 알림 o   
-< 마이페이지(개인정보변경) > - 알림 o ( 관리자가 변경 했을 경우에만 알림 발송 처리 되어있었음 )     
-                              UserController.java
-                              UserServiceImpl.java
+< 일정관리(업무요청) >- 알림 o     
+< 마이페이지(개인정보변경) > - 알림 o ( 관리자가 변경 했을 경우에만 알림 발송 처리 되어있었음 )        
+                              UserController.java   
+                              UserServiceImpl.java   
 
-< 프로젝트 > - 알림 o    
+< 프로젝트 > - 알림 o       
+         
+< 전자결재 > - 결재를 눌렀을때 알림이 감      
+               기안하기 (참조자, 수신자) - 알림 o     
+               결재 - 알림 o   
+               ApprovalServiceImpl.java   
+
       
-< 전자결재 > - 결재를 눌렀을때 알림이 감   
-               기안하기 (참조자, 수신자) - 알림 o   
-               결재 - 알림 o
-               ApprovalServiceImpl.java
+< 통합게시판 >    
+   
+일반게시판 - 알림 o   
+             BoardServiveImpl.java   
+설문조사 - 알림 o     
+           SurveyDetail.vue   
+           SurveyController.java   
+           SurveyServiceImple.java   
+       
+업무요청 - 알림 o      
+교육신청 - 배포 후 테스트 필요     
+           EduApplController.java      
+           EduAppplServiceImpl.java   
+   
 
    
-< 통합게시판 >    
 
-일반게시판 - 알림 o
-             BoardServiveImpl.java
-설문조사 - 알림 o 
-           SurveyDetail.vue
-           SurveyController.java
-           SurveyServiceImple.java
- 
-업무요청 - 알림 o   
-교육신청 - 배포 후 테스트 필요  
-           EduApplController.java
-           EduAppplServiceImpl.java
-
-
-
-
-알림 - AlarmServiceImpl.java
-업무지원요청관리 엑셀 다운로드 - BzWorkSupportReqMngServiceImpl.java 
+알림 - AlarmServiceImpl.java   
+업무지원요청관리 엑셀 다운로드 - BzWorkSupportReqMngServiceImpl.java    
 
     
 
 
+   
