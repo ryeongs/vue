@@ -80,7 +80,13 @@
 
 알림 - AlarmServiceImpl.java   
 업무지원요청관리 엑셀 다운로드 - BzWorkSupportReqMngServiceImpl.java    
+<br>
 
+- 확인 사항:   
+- > 엑셀다운로드 다시 배포
+- > 알림 배포 후 확인
+- > 디테일 다시 체크 후 콘솔로그 찍은거 지우기 
+- > 전부 괜찮을 경우 확인 메일 보내기 
     
 
 
