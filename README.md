@@ -110,31 +110,31 @@ parameterType이 두개일 순 없다..<br>
    	'''
 vo에서 checked는 String[] checked; 여서 foreach 문으로 돌려줘야한다.    
 밑에 <choose> 주석이 전 버전    
+<br>
+
+- **엑셀 다운로드 오류** :<br>       
+	업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨<br>          
+업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면    합니다.  (**완료**) <br>     
+
+TechHQ.vue <br>     
+BzWorkSupportReqMngServiceImpl.java<br>     
+T_BZ_WORKSUPP_REQ_Mapper.xml<br>      
+IBzWorkSupportReqMapper.java <br>    
+WorkSupportRequestManageController.java    <br>
+<br>
 
 
-- **엑셀 다운로드 오류** :       
-	업무지원요청관리 엑셀 출력시, 다른 조건을 입력하더라도 동일한 값 출력됨          
-업무지원요청관리에서 검색 시, 일자구분(작성일자,수행일자,요청일자)를 선택하여 값을 출력할 수 있는데 어느 일자를 선택하더라도 동일한 값이 출력됩니다. 구분에 알맞는 값이 출력되었으면    합니다.  (**완료**)      
-
-TechHQ.vue      
-BzWorkSupportReqMngServiceImpl.java      
-T_BZ_WORKSUPP_REQ_Mapper.xml      
-IBzWorkSupportReqMapper.java     
-WorkSupportRequestManageController.java     
-
-
-
-### activeMQ       
-
-실행하는법 : 최신 버전 다운로드 후 (http://activemq.apache.org/)       
-	     압축 풀고 cmd 로 /bin 까지가서 activemq start 입력      
-	     그럼 실행된다.      
-activeMQ 실행 상황 보는 사이트(http://localhost:8161/admin)       
-id : admin / pw: admin    
-
+### activeMQ  <br>     
+<br>
+실행하는법 : 최신 버전 다운로드 후 (http://activemq.apache.org/)  <br>     
+	     압축 풀고 cmd 로 /bin 까지가서 activemq start 입력 <br>     
+	     그럼 실행된다. <br>     
+activeMQ 실행 상황 보는 사이트(http://localhost:8161/admin)  <br>     
+id : admin / pw: admin    <br>
+<br>
 ***   
-### 02/24(수)   
+### 02/24(수)   <br>
 
-- 알림 테스트   
-- https://gw.sangsanginworld.co.kr/#/login 상상인 사이트    
-id : KSUPERMIN /pw : k@0ns0ftssi20200921!@
+- 알림 테스트   <br>
+- https://gw.sangsanginworld.co.kr/#/login 상상인 사이트 <br>   
+id : KSUPERMIN /pw : k@0ns0ftssi20200921!@<br>
