@@ -84,23 +84,23 @@ Draft.vue - 989
 
 
 #### 해결 방법       
-
-T_BZ_WORKSUPP_REQ_Mapper.xml 에       
-<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데         
-parameterType이 BzWorkSupportSearchRequestVO 인데          
-IBzWorkSupportReqMapper.java 안에          
-List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo) 부분에          
-List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status) 로 해놓음;;         
-parameterType이 두개일 순 없다..             
-	'''   
-	 <if test="checked != null and checked != ''">
-                AND REQ.STATUS IN
-                <foreach collection="checked" open="(" close=")" item="checked" separator=",">
-                    #{checked}
-                </foreach>
-            </if>
-		    <choose>
-	           <when test = "checked != null and checked != ''">
+<br>
+T_BZ_WORKSUPP_REQ_Mapper.xml 에       <br>
+<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데   <br>      
+parameterType이 BzWorkSupportSearchRequestVO 인데          <br>
+IBzWorkSupportReqMapper.java 안에          <br>
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo) 부분에          <br>
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status) 로 해놓음;;         <br>
+parameterType이 두개일 순 없다..             <br>
+	'''   <br>
+	 <if test="checked != null and checked != ''"><br>
+                AND REQ.STATUS IN<br>
+                <foreach collection="checked" open="(" close=")" item="checked" separator=","><br>
+                    #{checked}<br>
+                </foreach><br>
+            </if><br>
+		    <choose><br>
+	           <when test = "checked != null and checked != ''"><br>
 	            AND   REQ.STATUS = #{checked}
 	           </when>
 	           <otherwise>
