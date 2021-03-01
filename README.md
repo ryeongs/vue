@@ -85,14 +85,14 @@ Draft.vue - 989
 
 #### 해결 방법       
 <br>
-T_BZ_WORKSUPP_REQ_Mapper.xml 에       <br>
-<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데   <br>      
-parameterType이 BzWorkSupportSearchRequestVO 인데          <br>
-IBzWorkSupportReqMapper.java 안에          <br>
-List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo) 부분에          <br>
-List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status) 로 해놓음;;         <br>
-parameterType이 두개일 순 없다..             <br>
-	'''   <br>
+T_BZ_WORKSUPP_REQ_Mapper.xml 에<br>       
+<select id="getExcelListForHq" parameterType="BzWorkSupportSearchRequestVO" resultType="BzWorkSuppRequestMngDTO"> 가 있는데<br>         
+parameterType이 BzWorkSupportSearchRequestVO 인데<br>          
+IBzWorkSupportReqMapper.java 안에<br>
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo) 부분에<br>
+List<BzWorkSuppRequestMngDTO> getExcelListForHq(final BzWorkSupportSearchRequestVO vo, String status) 로 해놓음;;<br>
+parameterType이 두개일 순 없다..<br>
+	''' <br>
 	 <if test="checked != null and checked != ''"><br>
                 AND REQ.STATUS IN<br>
                 <foreach collection="checked" open="(" close=")" item="checked" separator=","><br>
